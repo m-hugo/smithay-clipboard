@@ -199,6 +199,7 @@ fn clipboard_thread(
             version,
         } = event
         {
+            eprintln!("{}", interface.as_str());
             if "wl_seat" == interface.as_str() && version >= 2 {
                 if let Some(ref data_device_manager) =
                     data_device_manager_clone.lock().unwrap().deref()
