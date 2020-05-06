@@ -12,7 +12,7 @@ keywords = ["clipboard", "wayland"]
 [dependencies]
 sctk = { package = "smithay-client-toolkit", version = "0.9.1", default-features = false }
 # We have to specify `wayland-client` as dependency, since downstream is failing
-# to compile, in case it's different version of `wayland-client` somewhere
+# to compile when there is a different version of `wayland-client` somewhere
 # in its dependency graph.
 wayland-client = { version = "0.26.3", features = ["dlopen"] }
 
